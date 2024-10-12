@@ -1,0 +1,15 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: color 0.3s, transform 0.3s !important;
+  text-align: center;
+}
+/* header {
+  background-image: url("https://images.stockcake.com/public/6/0/b/60b52429-f1ed-4449-9594-ab3467138763_large/colorful-art-studio-stockcake.jpg");
+  background-color: rgba(255, 255, 255, 0.966);
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */

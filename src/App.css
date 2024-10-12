@@ -1,0 +1,30 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: color 0.3s, transform 0.3s !important;
+  text-align: center;
+}
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  background: rgb(135, 207, 235);
+  padding: 20px;
+}
+.menu ul li {
+  color: white;
+  /* border: 2px solid whitesmoke; */
+  /* text-align: center; */
+  padding: 10px 0 10px 20px;
+  border-radius: 20px;
+  /* margin-bottom: 1px; */
+}
+.menu ul li:hover {
+  background: rgb(86, 208, 245);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.menu ul li a:hover {
+  color: silver;
+}
