@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css'
+import vide from '../src/assets/vidadls/vidg.mp4'
+import me from '../src/assets/img/me.jpeg'
 export default function App() {
   const [dark, setDark] = React.useState(false)
   const [menu, setMenu] = React.useState(false)
@@ -14,121 +16,153 @@ export default function App() {
   return (
     <>
       <header className=''>
-        <nav className='flex items-center justify-between px-4 md:px-14 pt-6 md:pt-10'>
-          <div className='text-xl'>
-            <a href="" className='font-semibold uppercase  hover:text-slate-700
-            '>
-              Academie 
-              <span className='text-sky-400'> Dela </span>
-              Salle
-            </a>
-          </div>
-          <div className={`lg:flex ${menu ? "menu" : "hidden"}`}>
-            <ul className='lg:flex gap-x-8 font-semibold text-md '>
-              <li>
-                <a href="" className='hover:text-sky-500 leading-6'>Home</a>
-              </li>
-              <li>
-               <a href="" 
-                className='hover:text-sky-500 leading-6'>About Us</a>
-              </li>
-              <li>
-               <a href="" 
-                className='hover:text-sky-500 leading-6'>Academics</a>
-              </li>
-              <li>
-               <a href="" 
-                className='hover:text-sky-500 leading-6'>Admission</a>
-              </li>
-              <li>
-               <a href="" 
-                className='hover:text-sky-500 leading-6'>Gallery</a>
-              </li>
-              <li>
-               <a href="" 
-                className='hover:text-sky-500 leading-6'>Contact Us</a>
-              </li>
-              
-            </ul>
-          </div>
-          <div className='flex items-center border-l border-slate-200 ml-6 pl-6 gap-x-2'>
-            <div className={`${dark ? "hidden" : ""}`}>
-              <span>
-                <span href="" onClick={handleClick}>
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-                  <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path>
-                </svg>
-                </span>
+        <div className='relative w-full h-screen overflow-hidden'>
+          <div className='absolute inset-0'>
 
-              </span>
+            <video src={vide} poster=''autoPlay muted loop className='bg-zinc-100 rounded-md h-screen object-cover' />
 
+          </div>
+          <div class="absolute inset-0 bg-black opacity-20"></div>
+
+          <div className='relative z-10 '>
+            <nav className='flex items-center justify-between px-4 md:px-14 pt-6 md:py-10'>
+              <div className='text-lg lg:text-xl'>
+                <a href="" className='font-semibold uppercase text-slate-50  hover:text-slate-700
+                '>
+                  Academie 
+                  <span className='text-sky-400'> Dela </span>
+                  Salle
+                </a>
+                
+              </div>
+              <div className={`lg:flex ${menu ? "menu" : "hidden"}`}>
+                <ul className='lg:flex gap-x-8 font-semibold text-md '>
+                  <li>
+                    <a href="" className='hover:text-sky-500 leading-6'>Home</a>
+                  </li>
+                  <li>
+                  <a href="" 
+                    className='hover:text-sky-500 leading-6'>About Us</a>
+                  </li>
+                  <li>
+                  <a href="" 
+                    className='hover:text-sky-500 leading-6'>Academics</a>
+                  </li>
+                  <li>
+                  <a href="" 
+                    className='hover:text-sky-500 leading-6'>Admission</a>
+                  </li>
+                  <li>
+                  <a href="" 
+                    className='hover:text-sky-500 leading-6'>Gallery</a>
+                  </li>
+                  <li>
+                  <a href="" 
+                    className='hover:text-sky-500 leading-6'>Contact Us</a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div className='flex items-center border-l border-slate-200 ml-6 pl-6 gap-x-2'>
+                <div className={`${dark ? "hidden" : ""}`}>
+                  <span>
+                    <span href="" onClick={handleClick}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                      <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path>
+                    </svg>
+                    </span>
+
+                  </span>
+
+                </div>
+                <div className={`${dark ? "" : "hidden"}`}>
+                  <span href="" onClick={handleClick}>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
+                    </svg>
+                  </span>
+
+
+                </div>
+                <div className='group relative'>
+                  <span>
+                  <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="fill-sky-400/20 stroke-sky-500" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
+                  </svg>
+
+                  </span>
+                  <span className='hidden absolute right-7 pt-5  group-hover:flex'>
+                    <span className='border-r-2 px-2 text-sky-200 font-semibold'>Gicumbi</span>
+                    <span className='px-2 text-sky-200 font-semibold'>Byumba</span>
+                  </span>
+                </div>
+                <div>
+                  <span className={`lg:hidden ${menu ? "hidden" : ""}`}onClick={toggleMenu}>
+                  <svg className="w-8 h-8 text-sky-400 hover:scale-105 cursor-pointer hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                  </svg>
+
+                  </span>
+                  <span className={`lg:hidden ${menu ? "" : "hidden"}`} onClick={toggleMenu}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 text-sky-400 hover:scale-105 cursor-pointer hover:text-red-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+
+                  </span>
+                </div>
+              </div>
+            </nav>
+
+            <div className={`hero flex flex-col justify-center items-center mx-auto pt-32 md:pt-32 px-4 md:px-14 ${menu ? "mt-52" : ""}`}>
+              <div>
+                <p className='mx-auto max-w-5xl text-4xl md:text-6xl font-semibold tracking-tight text-slate-50 text-center'>
+                  Academie
+                  <span className='text-sky-400'> school of excellence </span>
+                  and values
+                </p>
+              </div>
+              <div className='max-w-3xl'>
+                <p className='mx-auto my-6 text-2xl tracking-tight text-slate-50 text-center'>
+                Welcome to place where learning transform lives. joins us in shaping a brighter future
+                <span className='text-blue-400 font-semibold'> together.</span> 🖐️
+                </p>
+              </div>
+              <div className='flex gap-x-12 pt-20 md:pt-14'>
+                <button>
+                <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700">Learn more 
+                  <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+                  </a>
+                </button>
+
+                <button className='group'>
+                <a href="#" className="inline-flex  gap-2 items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700">
+                  <svg class="w-6 h-6 text-gray-800 hover:text-blue-700 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
+                    </svg>
+                    Babyeyi
+                  </a>
+                </button>
+              </div>
             </div>
-            <div className={`${dark ? "" : "hidden"}`}>
-              <span href="" onClick={handleClick}>
-                <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
-                </svg>
-              </span>
-
-
-            </div>
-            <div className='group relative'>
-              <span>
-              <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="fill-sky-400/20 stroke-sky-500" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-              </svg>
-
-              </span>
-              <span className='hidden absolute right-7 pt-5  group-hover:flex'>
-                <span className='border-r-2 px-2 text-sky-400 font-semibold'>Gicumbi</span>
-                <span className='px-2 text-sky-400 font-semibold'>Byumba</span>
-              </span>
-            </div>
-            <div>
-              <span className='lg:hidden' onClick={toggleMenu}>
-              <svg className="w-8 h-8 text-sky-400 hover:scale-105 cursor-pointer hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
-              </svg>
-
-              </span>
-            </div>
           </div>
-        </nav>
 
-        <div className={`hero flex flex-col justify-center items-center mx-auto pt-32 md:pt-48 px-4 md:px-14 ${menu ? "mt-52" : ""}`}>
-          <div>
-            <p className='mx-auto max-w-5xl text-4xl md:text-6xl font-semibold tracking-tight text-slate-900 text-center'>
-              Academie
-              <span className='text-sky-400'> school of excellence </span>
-              and values
-            </p>
-          </div>
-          <div className='max-w-3xl'>
-            <p className='mx-auto my-6 text-2xl tracking-tight text-slate-700 text-center'>
-            Welcome to place where learning transform lives. joins us in shaping a brighter future
-            <span className='text-blue-400 font-semibold'> together.</span> 🖐️
-            </p>
-          </div>
-          <div className='flex gap-x-12 pt-20 md:pt-14'>
-            <button>
-            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700">Learn more 
-              <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-              </a>
-            </button>
-
-            <button>
-            <a href="#" class="inline-flex gap-2 items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700">
-              <svg class="w-6 h-6 text-gray-800 hover:text-blue-700 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
-                </svg>
-                Babyeyi
-              </a>
-            </button>
-          </div>
         </div>
+
+
       </header>
       <main>
         {/* values */}
@@ -174,8 +208,12 @@ export default function App() {
           </div>
 
         </section>
+
+        
+        
+        as
         {/* about */}
-        <section className='px-4 md:px-14  pb-20'>
+        <section className='px-6 md:px-14  pb-20'>
           <div className='flex flex-col items-center   justify-center'>
               <p className='text-lg text-gray-500 '>
                 Unique
@@ -199,7 +237,7 @@ export default function App() {
           </div>
         </section>
         {/* programs */}
-        <section className='px-4 md:px-14 pt-10 pb-20'>
+        <section className='px-6 md:px-14 pt-10 pb-20'>
           <div className='flex flex-col'>
             <div className='flex flex-col items-center justify-center'>
               <p className='text-lg text-gray-500 '>
@@ -253,7 +291,7 @@ export default function App() {
           </div>
         </section>
         {/* Testimonials */}
-        <section className='px-4 md:px-14 pt-10 pb-20 p-'>
+        <section className='px-6 md:px-14 pt-10 pb-20 p-'>
           <div className='flex flex-col'>
             <div className='flex flex-col items-center justify-center'>
               
@@ -268,10 +306,12 @@ export default function App() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-20'>
               <div className='bg-slate-50 shadow-2xl px-5 py-8 rounded-xl min-h-5 hover:transition-opacity hover:opacity-70'>
                 <div className='flex gap-4'>
-                  <img src="https://images.stockcake.com/public/2/8/8/288e7709-3abf-4d06-bd17-eb681cf9ac51_large/joyful-emoji-ball-stockcake.jpg" alt="" className='h-14 rounded-full object-cover' />
+                  <img src={me} alt="" className='h-14 rounded-full object-cover' />
                   <p className='flex flex-col text-base text-slate-900'>
-                    <span className='font-semibold'>Ryan Florence</span>
-                    <span className='mt-0.5'>Remix & React Training</span>
+                    <span className='font-bold'>LEO Constantin</span>
+                    <span className='mt-0.5 font-medium'>Chef
+                      <span className='text-sky-400'> (Pro 21)</span>
+                    </span>
                   </p>
                 </div>
                 <div className='mt-6 text-slate-700'>
@@ -284,8 +324,8 @@ export default function App() {
                 <div className='flex gap-4'>
                   <img src="https://images.stockcake.com/public/2/8/8/288e7709-3abf-4d06-bd17-eb681cf9ac51_large/joyful-emoji-ball-stockcake.jpg" alt="" className='h-14 rounded-full object-cover' />
                   <p className='flex flex-col text-base text-slate-900'>
-                    <span className='font-semibold'>Ryan Florence</span>
-                    <span className='mt-0.5'>Remix & React Training</span>
+                    <span className='font-bold'>MANIRAKIZA Felix</span>
+                    <span className='mt-0.5 font-medium'>Head boy<span className='text-sky-400'> (Pro 21)</span></span>
                   </p>
                 </div>
                 <div className='mt-6 text-slate-700'>
@@ -298,8 +338,8 @@ export default function App() {
                 <div className='flex gap-4'>
                   <img src="https://images.stockcake.com/public/2/8/8/288e7709-3abf-4d06-bd17-eb681cf9ac51_large/joyful-emoji-ball-stockcake.jpg" alt="" className='h-14 rounded-full object-cover' />
                   <p className='flex flex-col text-base text-slate-900'>
-                    <span className='font-semibold'>Ryan Florence</span>
-                    <span className='mt-0.5'>Remix & React Training</span>
+                    <span className='font-bold'>UMULISA Elizabeth</span>
+                    <span className='mt-0.5 font-medium'>Cheften <span className='text-sky-400'> (Pro 21)</span></span>
                   </p>
                 </div>
                 <div className='mt-6 text-slate-700'>
@@ -315,8 +355,10 @@ export default function App() {
                 <div className='flex gap-4'>
                   <img src="https://images.stockcake.com/public/2/8/8/288e7709-3abf-4d06-bd17-eb681cf9ac51_large/joyful-emoji-ball-stockcake.jpg" alt="" className='h-14 rounded-full object-cover' />
                   <p className='flex flex-col text-base text-slate-900'>
-                    <span className='font-semibold'>Ryan Florence</span>
-                    <span className='mt-0.5'>Remix & React Training</span>
+                    <span className='font-bold'>SANDRINE</span>
+                    <span className='mt-0.5 font-medium'>Student
+                    <span className='text-sky-400'> (Pro 21)</span>
+                    </span>
                   </p>
                 </div>
                 <div className='mt-6 text-slate-700'>
@@ -329,8 +371,10 @@ export default function App() {
                 <div className='flex gap-4'>
                   <img src="https://images.stockcake.com/public/2/8/8/288e7709-3abf-4d06-bd17-eb681cf9ac51_large/joyful-emoji-ball-stockcake.jpg" alt="" className='h-14 rounded-full object-cover' />
                   <p className='flex flex-col text-base text-slate-900'>
-                    <span className='font-semibold'>Ryan Florence</span>
-                    <span className='mt-0.5'>Remix & React Training</span>
+                    <span className='font-bold'>MANIRAKIZA Amos</span>
+                    <span className='mt-0.5 font-medium'>Student
+                    <span className='text-sky-400'> (Pro 21)</span>
+                    </span>
                   </p>
                 </div>
                 <div className='mt-6 text-slate-700'>
@@ -343,8 +387,8 @@ export default function App() {
                 <div className='flex gap-4'>
                   <img src="https://images.stockcake.com/public/2/8/8/288e7709-3abf-4d06-bd17-eb681cf9ac51_large/joyful-emoji-ball-stockcake.jpg" alt="" className='h-14 rounded-full object-cover' />
                   <p className='flex flex-col text-base text-slate-900'>
-                    <span className='font-semibold'>Ryan Florence</span>
-                    <span className='mt-0.5'>Remix & React Training</span>
+                    <span className='font-bold'>ABAYO Shine</span>
+                    <span className='mt-0.5 font-medium'>Student <span className='text-sky-400'> (Pro 21)</span></span>
                   </p>
                 </div>
                 <div className='mt-6 text-slate-700'>
@@ -358,7 +402,7 @@ export default function App() {
           </div>
         </section>
         {/* principal */}
-        <section className='px-4 md:px-14 pt-16 pb-20'>
+        <section className='px-6 md:px-14 pt-16 pb-20'>
           <div className='flex flex-col items-center   justify-center pb-16'>
               <p>📢</p>
               <p className='text-lg text-gray-500 '>
@@ -391,7 +435,7 @@ export default function App() {
         </section>
         
         {/* questions */}
-        <section className='px-4 md:px-14 pt-20 pb-24'>
+        <section className='px-6 md:px-14 pt-20 pb-24'>
           <div className='flex flex-wrap lg:flex-nowrap justify-between gap-x-7 gap-y-16'>
             <div className='md:w-[90%] sm:w-full'>
               <p className='text-base font-semibold text-indigo-500'>
@@ -512,7 +556,7 @@ export default function App() {
         </section>
 
         {/* newsletter */}
-        <section className='px-4 md:px-14 pt-10'>
+        <section className='px-6 md:px-14 pt-10'>
           <div className='flex flex-wrap lg:flex-nowrap gap-10 pb-20'>
             <div className='lg:w-1/2 sm:w-full'>
               <h2 class="mb-6 font-bold text-3xl text-gray-800">
@@ -550,7 +594,7 @@ export default function App() {
         
       </main>
 
-      <footer className="bg-gray-100 px-4 md:px-14 pt-10 mt-2 text-white ">
+      <footer className="bg-gray-100 px-6 lg:px-14 pt-10 mt-2 text-white ">
 
       <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-y-6 gap-x-10 pb-9">
               
